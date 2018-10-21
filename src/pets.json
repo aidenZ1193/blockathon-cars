@@ -1,34 +1,34 @@
 [
   {
     "id": 0,
-    "name": "Frieda",
-    "picture": "images/scottish-terrier.jpeg",
-    "age": 3,
-    "breed": "Scottish Terrier",
-    "location": "Lisco, Alabama"
+    "name": "Wheel",
+    "picture": "images/tire.jpg",
+    "age": 100,
+    "breed": "Michelin",
+    "location": "Riverside, California"
   },
   {
     "id": 1,
-    "name": "Gina",
-    "picture": "images/scottish-terrier.jpeg",
-    "age": 3,
-    "breed": "Scottish Terrier",
+    "name": "Shell",
+    "picture": "images/shell.jpg",
+    "age": 20,
+    "breed": "Red Bull",
     "location": "Tooleville, West Virginia"
   },
   {
     "id": 2,
-    "name": "Collins",
-    "picture": "images/french-bulldog.jpeg",
-    "age": 2,
-    "breed": "French Bulldog",
+    "name": "Chassis",
+    "picture": "images/chassis.png",
+    "age": 30,
+    "breed": "Formula",
     "location": "Freeburn, Idaho"
   },
   {
     "id": 3,
-    "name": "Melissa",
-    "picture": "images/boxer.jpeg",
-    "age": 2,
-    "breed": "Boxer",
-    "location": "Camas, Pennsylvania"
+    "name": "Car",
+    "picture": "images/car.jpg",
+    "age": 0,
+    "breed": "Irvine Auto",
+    "location": "Irvine, California"
   }
 ]
