@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "name": "Wheel",
+    "name": "Tier",
     "picture": "images/tire.jpg",
     "age": 100,
     "breed": "Michelin",
@@ -11,7 +11,7 @@
     "id": 1,
     "name": "Shell",
     "picture": "images/shell.jpg",
-    "age": 20,
+    "age": 0,
     "breed": "Red Bull",
     "location": "Tooleville, West Virginia"
   },

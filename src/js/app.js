@@ -76,7 +76,7 @@ App = {
 	}).then(function(adopters) {
 	  for (i = 0; i < adopters.length; i++) {
 	    if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-	      $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
+			//$('.panel-pet').eq(i).find('button').text('Generate').attr('disabled', false);
 	    }
 	  }
 	}).catch(function(err) {
