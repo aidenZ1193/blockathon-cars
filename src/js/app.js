@@ -11,9 +11,9 @@ App = {
       for (i = 0; i < data.length; i ++) {
         petTemplate.find('.panel-title').text(data[i].name);
         petTemplate.find('img').attr('src', data[i].picture);
-        petTemplate.find('.pet-breed').text(data[i].breed);
-        petTemplate.find('.pet-age').text(data[i].age);
-        petTemplate.find('.pet-location').text(data[i].location);
+        //petTemplate.find('.pet-breed').text(data[i].breed);
+        //petTemplate.find('.pet-age').text(data[i].age);
+        //petTemplate.find('.pet-location').text(data[i].location);
         petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
 
         petsRow.append(petTemplate.html());
@@ -37,7 +37,7 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('Cars.json', function(data) {
+    $.getJSON('pets.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract
       var GenerateArtifact = data;
       App.contracts.GenerateCars = TruffleContract(GenerateArtifact);
@@ -56,30 +56,30 @@ App = {
     $(document).on('click', '.btn-adopt', App.handleAdopt);
   },
 
-  markGenerated: function() {
+  markGenerated: function(cars) {
     var generateInstance; // up to here
 
-    App.contracts.Adoption.deployed().then(function(instance) {
-      adoptionInstance = instance;
+    App.contracts.GenerateCars.deployed().then(function(instance) {
+      generateInstance = instance;
     
-      return adoptionInstance.getAdopters.call();
-    }).then(function(adopters) {
-      for (i = 0; i < adopters.length; i++) {
-        if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
+      return generateInstance.getCars.call();
+    }).then(function(cars) {
+      for (i = 0; i < cars; i++) {
+       // if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
           $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
-        }
+       // }
       }
     }).catch(function(err) {
       console.log(err.message);
     });
   },
 
-  handleAdopt: function(event) {
+  handleGenerate: function(event) {
     event.preventDefault();
 
-    var petId = parseInt($(event.target).data('id'));
+    //var petId = parseInt($(event.target).data('id'));
 
-    var adoptionInstance;
+    var GenerateInstance;
 
     web3.eth.getAccounts(function(error, accounts) {
       if (error) {
@@ -89,10 +89,10 @@ App = {
       var account = accounts[0];
     
       App.contracts.Adoption.deployed().then(function(instance) {
-        adoptionInstance = instance;
+        generateInstance = instance;
     
         // Execute adopt as a transaction by sending account
-        return adoptionInstance.adopt(petId, {from: account});
+        return generateInstance.GenerateCars({from: account});
       }).then(function(result) {
         return App.markAdopted();
       }).catch(function(err) {

@@ -3,32 +3,24 @@
     "id": 0,
     "name": "Tires",
     "picture": "images/scottish-terrier.jpeg",
-    "age": 3,
-    "breed": "Scottish Terrier",
-    "location": "Lisco, Alabama"
+    "numbers": 300
   },
   {
     "id": 1,
-    "name": "Gina",
+    "name": "Chassis",
     "picture": "images/scottish-terrier.jpeg",
-    "age": 3,
-    "breed": "Scottish Terrier",
-    "location": "Tooleville, West Virginia"
+    "numbers": 80
   },
   {
     "id": 2,
-    "name": "Collins",
+    "name": "Cars",
     "picture": "images/french-bulldog.jpeg",
-    "age": 2,
-    "breed": "French Bulldog",
-    "location": "Freeburn, Idaho"
+    "numbers": 0
   },
   {
     "id": 3,
     "name": "Melissa",
     "picture": "images/boxer.jpeg",
-    "age": 2,
-    "breed": "Boxer",
-    "location": "Camas, Pennsylvania"
+    "numbers": 300
   }
 ]
