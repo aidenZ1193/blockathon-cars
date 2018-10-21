@@ -37,16 +37,16 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('Adoption.json', function(data) {
+    $.getJSON('Cars.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract
-      var AdoptionArtifact = data;
-      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
+      var GenerateArtifact = data;
+      App.contracts.GenerateCars = TruffleContract(GenerateArtifact);
     
       // Set the provider for our contract
-      App.contracts.Adoption.setProvider(App.web3Provider);
+      App.contracts.GenerateCars.setProvider(App.web3Provider);
     
       // Use our contract to retrieve and mark the adopted pets
-      return App.markAdopted();
+      return App.markGenerated();
     });
 
     return App.bindEvents();
@@ -56,8 +56,8 @@ App = {
     $(document).on('click', '.btn-adopt', App.handleAdopt);
   },
 
-  markAdopted: function(adopters, account) {
-    var adoptionInstance;
+  markGenerated: function() {
+    var generateInstance; // up to here
 
     App.contracts.Adoption.deployed().then(function(instance) {
       adoptionInstance = instance;
